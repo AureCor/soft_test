@@ -18,7 +18,7 @@ import pandas as pd
 #age = np.loadtxt(sys.argv[1], skiprows=1, usecols=1)
 df = pd.read_csv(sys.argv[1],sep='\t')
 
-mean_age = sum(df.age)/len(df.age)
+mean_age = df.age.mean()
 assert mean_age < 100
 assert mean_age > 10
 
